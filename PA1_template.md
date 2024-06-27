@@ -22,6 +22,7 @@ Read the data into a data frame.
 activity <- read.table("activity.csv", header = TRUE, sep = ",")
 activity$date <- as.POSIXct(activity$date, format = "%Y-%m-%d")
 ```
+
 ## What is mean total number of steps taken per day?
 Calculate the total number of steps taken per day.
 
@@ -91,6 +92,7 @@ print(maxInterval)
 ## [1] 835
 ```
 The 5-minute interval that contains the maximum number of steps is 835.
+
 ## Imputing missing values
 Calculate and report the total number of missing values in the dataset.
 
@@ -129,6 +131,7 @@ medianStepsImputed <- median(totalStepsImputed$steps)
 ```
 
 The mean of the total number of steps taken per day is 1.0766189\times 10^{4} and the median is 1.0766189\times 10^{4}.
+
 ## Are there differences in activity patterns between weekdays and weekends?
 
 Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.

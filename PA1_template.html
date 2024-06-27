@@ -397,8 +397,12 @@ dataset, contains the maximum number of steps?</p>
 print(maxInterval)</code></pre>
 <pre><code>## [1] 835</code></pre>
 <p>The 5-minute interval that contains the maximum number of steps is
-835. ## Imputing missing values Calculate and report the total number of
-missing values in the dataset.</p>
+835.</p>
+</div>
+<div id="imputing-missing-values" class="section level2">
+<h2>Imputing missing values</h2>
+<p>Calculate and report the total number of missing values in the
+dataset.</p>
 <pre class="r"><code>missingValues &lt;- sum(is.na(activity$steps))</code></pre>
 <p>The total number of missing values in the dataset is 2304.</p>
 <p>Devise a strategy for filling in all of the missing values in the
@@ -416,8 +420,11 @@ per day.</p>
 <pre class="r"><code>meanStepsImputed &lt;- mean(totalStepsImputed$steps)
 medianStepsImputed &lt;- median(totalStepsImputed$steps)</code></pre>
 <p>The mean of the total number of steps taken per day is 1.0766189^{4}
-and the median is 1.0766189^{4}. ## Are there differences in activity
-patterns between weekdays and weekends?</p>
+and the median is 1.0766189^{4}.</p>
+</div>
+<div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
+<h2>Are there differences in activity patterns between weekdays and
+weekends?</h2>
 <p>Create a new factor variable in the dataset with two levels -
 “weekday” and “weekend” indicating whether a given date is a weekday or
 weekend day.</p>
